@@ -1,0 +1,39 @@
+{
+	"version": "2.0.0",
+	"tasks": [{
+			"type": "cppbuild",
+			"label": "C/C++: gcc.exe arquivo de build ativo ver(1)",
+			"command": "C:\\MinGW\\bin\\gcc.exe",
+			"args": [
+				"-fdiagnostics-color=always",
+				"-g",
+				"${file}",
+				"-o",
+				"${fileDirname}\\${fileBasenameNoExtension}.exe"
+			],
+			"options": {
+				"cwd": "${fileDirname}"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"detail": "Tarefa gerada pelo Depurador."
+		},
+		{
+			"type": "shell",
+			"label": "Rodar o programa C .exe",
+			"command": "chcp 65001 && C:\\MinGW\\bin\\gcc.exe -g3 -Wall \"${file}\" -o \"${fileDirname}\\${fileBasenameNoExtension}.exe\" && \"${fileDirname}\\${fileBasenameNoExtension}.exe\"",
+			"options": {
+				"cwd": "C:\\MinGW\\bin"
+			},
+			"problemMatcher": [
+				"$gcc"
+			],
+			"group": {
+				"kind": "build",
+				"isDefault": true
+			},
+			"detail": "Tarefa gerada por Augusto."
+		}
+	]
+}
